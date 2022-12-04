@@ -4,16 +4,10 @@ require('dotenv').config()
 const accountSid = process.env.USER_ID;
 const authToken = process.env.TOKEN;
 const numeroAPI = process.env.NUMERO_API;
+const mensaje = process.env.MENSAJE;
 const client = require('twilio')(accountSid, authToken);
 
 // Array de los participantes 
-// Ejemplo del modelo de participante:
-// {
-//     id: 1,
-//     nombre: 'nombre',
-//     numero: '+5491122334455',
-//     seleccionado: false
-// }, 
 const participantes = require('./participantes')
 const valorRegalo = process.env.VALOR_REGALO;
 
@@ -24,9 +18,14 @@ participantes.forEach(participante => {
 })
 
 function enviarMensaje(from, to) {
+    let body = mensaje;
+    body = body.replace('NOMBRE_FROM', from.nombre)
+    body = body.replace('NOMBRE_TO', to.nombre)
+    body = body.replace('VALOR', valorRegalo)
+    console.log(body)
     client.messages
         .create({
-            body: `Buenas ${from.nombre}, el sorteo se acaba de hacer y te toca hacerle un regalo a: ${to.nombre}! (tope de $${valorRegalo}) `,
+            body: body,
             from: `whatsapp:${numeroAPI}`,
             to: `whatsapp:${from.numero}`
         })
