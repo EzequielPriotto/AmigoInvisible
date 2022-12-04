@@ -11,21 +11,22 @@ EL MENSAJE TIENE QUE SER [ join pond-sense ] ASI LA API DE TWILIO PUEDE MANDAR E
 
 LLENAR EL ARCHIVO [ participantes.js ] CON LOS DATOS DE LOS PARTICIPANTES
 LOS DATOS SON LOS SIGUIENTES:
+```
     {
       id: 1, ---> el id tiene que ser unico de forma creciente
       nombre: 'pepito', ---> nombre del participante (pueden ser nombre y apellido sin problema)
       numero: '+5491122334455', ---> numero del participante, respetar el formato (como en whatsapp con codigo de area)
       seleccionado: false ---> poner en false, se cambia a true una vez salga seleccionado     
     },
-
+```
 UNA VEZ TENGAS LISTA TU LISTA DE PARTICIPANTES, CREAR UN ARCHIVO QUE SE LLAME .env
 DENTRO PONER LAS SIGUIENTES VARIABLES DE ENTORNO (RELLENARLAS CON LOS DATOS PROPORCIONADOS POR TWILIO):
-
+```
 USER_ID= ''
 TOKEN=''
 NUMERO_API='' 
 VALOR_REGALO=''
-
+```
 
 POR ULTIMO, PARA CORRER EL PROGRAMA PONER EN LA TERMINAR EL COMANDO [ npm run program ]
 
