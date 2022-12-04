@@ -1,0 +1,16 @@
+{
+  "name": "amigoinvisible",
+  "version": "1.0.0",
+  "description": "programa para realizar sorteo del amigo invisible",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "program": "node index.js"
+  },
+  "author": "Ezequiel Priotto",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "twilio": "^3.83.4"
+  }
+}
