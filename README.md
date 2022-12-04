@@ -2,7 +2,7 @@ PASOS A SEGUIR PARA EL CORRECTO FUNCIONAMIENTO:
 
 TENER INSTALADO NODE ( para verificarlo utilizar el comando ```  node -v ``` )
 
-INSTALAR LAS DEPENDECIAS (dotenv & twilio) CON EL COMANDO ```  npm init ```
+INSTALAR LAS DEPENDECIAS (dotenv & twilio) CON EL COMANDO ```  npm i ```
 
 CREARSE O LOGUEARSE EN ``` https://www.twilio.com/login ```
 
